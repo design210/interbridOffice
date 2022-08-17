@@ -1,0 +1,67 @@
+//font-import
+@mixin NotoSans($font:1.5,$weight:400,$color:#000){
+	font-family: 'Noto Sans KR', sans-serif !important;
+	font-size:$font+rem !important;
+	font-weight:$weight;
+	line-height:$font*1.5+rem;
+	color:$color;
+}
+@mixin Montserrat($font:1.5,$weight:400,$color:#000){
+	font-family: 'Montserrat', sans-serif !important;
+	font-size:$font+rem !important;
+	font-weight:$weight;
+	line-height:$font*1.5+rem;
+	color:$color;
+}
+@mixin Pretendard($font:1.5,$weight:400,$color:#000){
+	font-family: 'Pretendard', sans-serif !important;
+	font-size:$font+rem !important;
+	font-weight:$weight;
+	line-height:$font*1.5+rem;
+	color:$color;
+}
+//background
+@mixin bg($color,$link,$repeat,$position){
+	background:$color $link $repeat $position;
+}
+//box shadow
+@mixin boxshadow($x,$y,$blur,$spread,$color){
+	-webkit-box-shadow: $x $y $blur $spread $color;
+    -moz-box-shadow: $x $y $blur $spread $color ;
+    -ms-box-shadow: $x $y $blur $spread $color;
+    -o-box-shadow: $x $y $blur $spread $color;
+    box-shadow: $x $y $blur $spread $color; 
+}
+@mixin insetshadow($x,$y,$blur,$spread,$color){
+	-webkit-box-shadow: inset $x $y $blur $spread $color;
+	-moz-box-shadow: inset $x $y $blur $spread $color;
+	-ms-box-shadow: inset $x $y $blur $spread $color;
+    -o-box-shadow: inset $x $y $blur $spread $color;
+	box-shadow: inset $x $y $blur $spread $color;
+}
+//gradient
+@mixin gradient($start,$end){
+	background:$start;
+	background: -moz-linear-gradient(left, $start 0%, $end 100%);
+	background: -webkit-linear-gradient(left, $start 0%,$end 100%);
+	background: linear-gradient(to right, $start 0%,$end 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$start, endColorstr=$end,GradientType=1 );
+}
+@mixin gradientY($start,$end){
+	background:$start;
+	background: -moz-linear-gradient(top, $start 0%, $end 100%);
+	background: -webkit-linear-gradient(top, $start 0%,$end 100%);
+	background: linear-gradient(to bottom, $start 0%,$end 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$start, endColorstr=$end,GradientType=1 );
+}
+//media query
+@mixin mobile {
+	@media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet}) {
+	  @content;
+	}
+} 
+@mixin desktop {
+	@media (min-width: #{$breakpoint-desktop}) {
+	  @content;
+	}
+}

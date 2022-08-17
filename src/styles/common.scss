@@ -1,0 +1,110 @@
+// Breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-desktop: 1400px;
+.sub-wrapper{
+    width: 1110px;
+	margin: 0 auto;
+}
+.lnb-wrap{
+    padding:100px 0;     
+}
+.contents-wrapper{
+    padding:100px 0;   
+}
+.divide{
+    display: flex;
+    width:1110px;
+    margin:0 auto;    
+    & > div{
+        &:first-child{
+            width:190px;
+        }
+        &:last-child{
+            width: calc(100% - 190px);
+        }
+        &.no-lnb{
+            width:100%;
+        }
+    }
+}
+.ck-basic {
+    
+}
+.important{
+    font-weight:700;
+}
+.container{
+    width:1110px;
+    margin:0 auto;
+    padding:0 20px;
+}
+.layout{
+    min-width:1110px;
+}
+//vuefity
+
+#ch-plugin {
+	& img {
+		margin-bottom: 100px !important;
+	}
+}
+//switch
+.switcher {
+	position: relative;
+	& input[type='checkbox'] {
+		position: absolute;
+		left: -9999999px;
+		& + label {
+			display: block;
+			width: 40px;
+			height: 22px;
+			background: #bdbdbd;
+			border-radius: 11px;
+			transition: all 0.2s ease-in-out;
+			cursor: pointer;
+			&:after {
+				transition: all 0.2s ease-in-out;
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				background: #fff;
+				@include boxshadow(-2px, 1px, 4px, 0px, rgba(0, 0, 0, 0.2));
+			}
+		}
+		&:checked {
+			& + label {
+				background: #ff4d56;
+				&:after {
+					left: 17px;
+					@include boxshadow(2px, 1px, 4px, 0px, rgba(0, 0, 0, 0.2));
+				}
+			}
+		}
+	}
+}
+
+.col-flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+//calendar header button disabled
+.mx-calendar-header-label {
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+}
+//radio

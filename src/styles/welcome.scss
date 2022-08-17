@@ -1,0 +1,66 @@
+@import './mixin.scss';
+.containered{
+	width: 100vw;
+	height: 100vh;
+	background-image: url('../../public/images/welcome_Background.png');
+    background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+.wrapper {
+	width: 80vw;
+	padding: 0 5%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.68) 26.56%, rgba(0, 0, 0, 0.45) 100%);
+	border-radius: 20px;
+	& .titled {
+		text-align: center;
+		@include Montserrat(5, 600, #ff4d56);
+		& h1 {
+			@include NotoSans(1.7, 500, #fff);
+		}
+	}
+	& .footer {
+		position: absolute;
+		bottom: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	& .perpose {
+		margin-top: 30px;
+		text-align: center;
+		padding-bottom: 50px;
+		width: 100%;
+		& span {
+			@include NotoSans(1.2, 400, #fff);
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			padding: 0 !important;
+			align-items: center;
+			
+			& li {
+				@include NotoSans(1.5, 400, #2e2e2e);
+				display: flex;
+				background: #fff;
+				margin: 10px 0;
+				width: 50%;
+				height: 60px;
+				border: 1px solid #fff;
+				border-radius: 5px;
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+                
+                & .text-link {
+                    color: inherit;
+                    text-decoration: inherit;
+                }
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,76 @@
+@import './mixin.scss';
+
+.visit{
+    width: 100%;
+	height: 100vh;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    & .cover{
+        width: 70%;
+        height: 80%;
+	    padding: 0 5%;
+        & .titled {
+            text-align: center;
+            @include Pretendard(2.5,800,#4f4f4f)
+        }
+        & .in{
+            width: 100%;
+            & label{
+                @include Pretendard(1.2, 400, #4f4f4f)
+            }
+            & input[type='text'] {
+                width: 100%;
+                height: 40px;
+                border: 1px solid #bdbdbd;
+                border-radius: 5px;
+                padding: 10px;
+                box-sizing : border-box;
+            }
+            & textarea {
+                width: 100%;
+                box-sizing : border-box;
+                border: 1px solid #bdbdbd;
+                border-radius: 5px;
+                padding: 10px 10px;
+            }
+            margin-bottom: 15px;
+        }
+        form {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        & .btn-group{
+            display:flex;
+            justify-content:center;
+            margin-top:20px;
+            & .btn-home{
+                height: 80px;
+                width:50%;
+                @include NotoSans(1.7,500,#333);
+                border-radius: 10px;
+                border:0;
+                margin-right:20px;
+            }
+            & .btn{
+                padding: 0;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                height: 80px;
+                background: #ff4d56;
+                @include NotoSans(1.7,500,#fff);
+                border-radius: 10px;
+                margin-bottom: 100px;
+            }
+        }
+        
+
+    }
+}
