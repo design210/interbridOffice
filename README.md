@@ -1,9 +1,5 @@
 # InterBridOffice
 
-## Contributor
-- 김정수(thomas@addtune.net)
-
-<br/>
 
 ## Tech Requirement (Tech Stack)
 - Create-react-app
